@@ -13,6 +13,7 @@ import Checkout from './pages/Checkout'
 import Auth from './pages/Auth'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Profile from './pages/profile'
 import OrdersDashboard from './pages/OrdersDashboard'
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="/orders-dashboard" element={<OrdersDashboard />} />
               </Routes>
             </main>
