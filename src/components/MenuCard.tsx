@@ -104,6 +104,7 @@ export default function MenuCard({
     
     addItem({
       id: itemId,
+      menuItemId: id, // Store the original UUID
       name: size ? `${name} (${size})` : name,
       price,
       size,
@@ -139,11 +140,11 @@ export default function MenuCard({
 
       {/* Content */}
       <div className="p-6 relative">
-        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
+        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-red-600 transition-colors duration-300">
           {name}
         </h3>
         {description && (
-          <p className="text-gray-700 text-sm mb-4 line-clamp-2 group-hover:text-gray-800 transition-colors duration-300">
+          <p className="text-white text-sm mb-4 line-clamp-2 group-hover:text-gray-800 transition-colors duration-300">
             {description}
           </p>
         )}
@@ -154,7 +155,7 @@ export default function MenuCard({
             <div className="space-y-3">
               {priceSmall && (
                 <div className="flex items-center justify-between p-2 rounded-lg hover:bg-red-50 transition-all duration-300 group/size">
-                  <span className="text-sm font-medium text-gray-800 group-hover/size:text-red-600 transition-colors duration-300">
+                  <span className="text-sm font-medium text-white group-hover/size:text-red-600 transition-colors duration-300">
                     {category === 'Pizza' ? '9"' : 'Small'}
                   </span>
                   <div className="flex items-center space-x-3">
@@ -176,7 +177,7 @@ export default function MenuCard({
               )}
               {priceMedium && (
                 <div className="flex items-center justify-between p-2 rounded-lg hover:bg-red-50 transition-all duration-300 group/size">
-                  <span className="text-sm font-medium text-gray-800 group-hover/size:text-red-600 transition-colors duration-300">
+                  <span className="text-sm font-medium text-white group-hover/size:text-red-600 transition-colors duration-300">
                     {category === 'Pizza' ? '12"' : 'Medium'}
                   </span>
                   <div className="flex items-center space-x-3">
@@ -198,7 +199,7 @@ export default function MenuCard({
               )}
               {priceLarge && (
                 <div className="flex items-center justify-between p-2 rounded-lg hover:bg-red-50 transition-all duration-300 group/size">
-                  <span className="text-sm font-medium text-gray-800 group-hover/size:text-red-600 transition-colors duration-300">
+                  <span className="text-sm font-medium text-white group-hover/size:text-red-600 transition-colors duration-300">
                     Large
                   </span>
                   <div className="flex items-center space-x-3">
